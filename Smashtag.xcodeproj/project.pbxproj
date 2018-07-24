@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		65DE4C632107B30C00E807ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DE4C622107B30C00E807ED /* AppDelegate.swift */; };
-		65DE4C652107B30C00E807ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DE4C642107B30C00E807ED /* ViewController.swift */; };
 		65DE4C682107B30C00E807ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65DE4C662107B30C00E807ED /* Main.storyboard */; };
 		65DE4C6A2107B30C00E807ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65DE4C692107B30C00E807ED /* Assets.xcassets */; };
 		65DE4C6D2107B30C00E807ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65DE4C6B2107B30C00E807ED /* LaunchScreen.storyboard */; };
+		65DE4C762107B58000E807ED /* TweetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DE4C752107B58000E807ED /* TweetsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		65DE4C5F2107B30C00E807ED /* Smashtag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smashtag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65DE4C622107B30C00E807ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		65DE4C642107B30C00E807ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		65DE4C672107B30C00E807ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65DE4C692107B30C00E807ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65DE4C6C2107B30C00E807ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65DE4C6E2107B30C00E807ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65DE4C752107B58000E807ED /* TweetsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +54,22 @@
 		65DE4C612107B30C00E807ED /* Smashtag */ = {
 			isa = PBXGroup;
 			children = (
-				65DE4C622107B30C00E807ED /* AppDelegate.swift */,
-				65DE4C642107B30C00E807ED /* ViewController.swift */,
+				65DE4C742107B4FB00E807ED /* Supporting files */,
 				65DE4C662107B30C00E807ED /* Main.storyboard */,
+				65DE4C752107B58000E807ED /* TweetsTableViewController.swift */,
+			);
+			path = Smashtag;
+			sourceTree = "<group>";
+		};
+		65DE4C742107B4FB00E807ED /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				65DE4C622107B30C00E807ED /* AppDelegate.swift */,
 				65DE4C692107B30C00E807ED /* Assets.xcassets */,
 				65DE4C6B2107B30C00E807ED /* LaunchScreen.storyboard */,
 				65DE4C6E2107B30C00E807ED /* Info.plist */,
 			);
-			path = Smashtag;
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65DE4C652107B30C00E807ED /* ViewController.swift in Sources */,
 				65DE4C632107B30C00E807ED /* AppDelegate.swift in Sources */,
+				65DE4C762107B58000E807ED /* TweetsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +288,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = AV.Smashtag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -294,7 +302,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = AV.Smashtag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

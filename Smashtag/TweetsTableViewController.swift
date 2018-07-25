@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Twitter
 
 class TweetsTableViewController: UITableViewController {
     
-    var tweets: [Array<Tweet>] () {
+    var tweets = [Array<Twitter.Tweet>] () {
         didSet {
             tableView.reloadData()
         }
@@ -25,7 +26,18 @@ class TweetsTableViewController: UITableViewController {
     }
     
     private func searchForTweets() {
-        
+        if let request = twitterRequest {
+            request.fetchTweets { newTweets in
+                dispatch_async( <#DispatchQueue#>)
+            }
+        }
+    }
+    
+    private var twitterRequest: Twitter.Request? {
+        if let query = searchText, !query.isEmpty {
+            return Twitter.Request(search: query + " -filter:retweets", count: 100)
+        }
+        return nil
     }
 
     override func viewDidLoad() {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		654441D221093E6E005F79E4 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654441D321093E6E005F79E4 /* Twitter.framework */; };
 		65DE4C632107B30C00E807ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DE4C622107B30C00E807ED /* AppDelegate.swift */; };
 		65DE4C682107B30C00E807ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65DE4C662107B30C00E807ED /* Main.storyboard */; };
 		65DE4C6A2107B30C00E807ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65DE4C692107B30C00E807ED /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		654441D321093E6E005F79E4 /* Twitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Twitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65DE4C5F2107B30C00E807ED /* Smashtag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smashtag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65DE4C622107B30C00E807ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65DE4C672107B30C00E807ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -29,17 +31,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				654441D221093E6E005F79E4 /* Twitter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		654441D121093E6E005F79E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				654441D321093E6E005F79E4 /* Twitter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		65DE4C562107B30C00E807ED = {
 			isa = PBXGroup;
 			children = (
 				65DE4C612107B30C00E807ED /* Smashtag */,
 				65DE4C602107B30C00E807ED /* Products */,
+				654441D121093E6E005F79E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

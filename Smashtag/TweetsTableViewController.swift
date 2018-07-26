@@ -25,10 +25,17 @@ class TweetsTableViewController: UITableViewController {
         }
     }
     
+    private var lastTwitterRequest: Twitter.Request?
+    
     private func searchForTweets() {
         if let request = twitterRequest {
-            request.fetchTweets { newTweets in
-                dispatch_async( <#DispatchQueue#>)
+            lastTwitterRequest = request
+            request.fetchTweets { [weak wself = self] newTweets in
+                DispatchQueue.global(qos: .userInitiated).async {
+                    if !newTweets.isEmpty, request == wself?.lastTwitterRequest {
+                        wself?.tweets.insert(newTweets, at: 0)
+                    }
+                }
             }
         }
     }
@@ -60,23 +67,29 @@ class TweetsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return tweets.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return tweets[section].count
+    }
+    
+    
+    private struct Storyboard {
+        static let TweetCellIdentifier = "Tweet"
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.TweetCellIdentifier, for: indexPath)
 
-        // Configure the cell...
-
+        let tweet = tweets[indexPath.section][indexPath.row]
+        cell.textLabel?.text = tweet.text
+        cell.detailTextLabel?.text = tweet.user.name
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

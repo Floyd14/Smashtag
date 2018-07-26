@@ -66,6 +66,7 @@
 		65DE4C612107B30C00E807ED /* Smashtag */ = {
 			isa = PBXGroup;
 			children = (
+				65DE4C6E2107B30C00E807ED /* Info.plist */,
 				65DE4C742107B4FB00E807ED /* Supporting files */,
 				65DE4C662107B30C00E807ED /* Main.storyboard */,
 				65DE4C752107B58000E807ED /* TweetsTableViewController.swift */,
@@ -79,7 +80,6 @@
 				65DE4C622107B30C00E807ED /* AppDelegate.swift */,
 				65DE4C692107B30C00E807ED /* Assets.xcassets */,
 				65DE4C6B2107B30C00E807ED /* LaunchScreen.storyboard */,
-				65DE4C6E2107B30C00E807ED /* Info.plist */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
